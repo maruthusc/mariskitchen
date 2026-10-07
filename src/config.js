@@ -14,7 +14,8 @@ export function getConfig(env) {
     name: "Mari's Kitchen",
     shortName: "Mari's",
     kitchen: "Mari's Kitchen",
-    url: env.NEXT_PUBLIC_SITE_URL || "https://maris-kitchen.workers.dev",
+    /** Public site URL. Optional: when unset, absolute URLs (og:image, canonical) use the origin the page is served from. */
+    url: (env.NEXT_PUBLIC_SITE_URL || "").replace(/\/$/, ""),
     tagline: "Homemade traditional South Indian food, cooked fresh for collection.",
     postcode: "CB4 3JD",
     collection: "Lunch 1:00 PM – 1:30 PM",
