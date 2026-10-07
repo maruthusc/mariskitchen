@@ -100,7 +100,7 @@ function fallbackCard(menu, SITE) {
   });
 }
 
-export function renderPage({ SITE, menu, menus = [] }) {
+export function renderPage({ SITE, menu, menus = [], origin }) {
   const orderUrl = SITE.cart15Url;
   const live = menus.length > 0;
   const waUrl = SITE.whatsappHref ? `${SITE.whatsappHref}?text=${encodeURIComponent(`Hi ${SITE.name}! I have a question.`)}` : "";
@@ -109,13 +109,18 @@ export function renderPage({ SITE, menu, menus = [] }) {
 
   const glimpse = live ? menus.map((m) => liveCard(m, SITE)).join("") : fallbackCard(menu, SITE);
 
+  const title = `${SITE.name} — Homemade South Indian Food, Cambridge`;
+  const description = `${SITE.tagline} Idly, idiyappam, kulambu, Chicken 65 and more. Order online and collect fresh.`;
+  const ogAlt = "The Homemade Cook — real food for real families";
+
   const ld = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: SITE.name,
     servesCuisine: ["South Indian", "Tamil"],
     description: SITE.tagline,
-    image: `${SITE.url}/og.png`,
+    image: `${origin}/og.png`,
+    url: `${origin}/`,
     address: { "@type": "PostalAddress", postalCode: SITE.postcode, addressCountry: "GB" },
     hasMenu: orderUrl,
   }).replace(/</g, "\\u003c");
@@ -125,13 +130,26 @@ export function renderPage({ SITE, menu, menus = [] }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>${esc(SITE.name)} — Homemade South Indian Food, Cambridge</title>
-<meta name="description" content="${esc(SITE.tagline)} Idly, idiyappam, kulambu, Chicken 65 and more. Order online and collect fresh.">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(description)}">
+<link rel="canonical" href="${esc(origin)}/">
 <meta name="theme-color" content="#95d0ba">
-<meta property="og:title" content="${esc(SITE.name)} — Homemade South Indian Food">
-<meta property="og:description" content="${esc(SITE.tagline)}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="${esc(SITE.url)}/og.png">
+<meta property="og:site_name" content="${esc(SITE.name)}">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="${esc(origin)}/">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:image" content="${esc(origin)}/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(ogAlt)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${esc(origin)}/og.png">
+<meta name="twitter:image:alt" content="${esc(ogAlt)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

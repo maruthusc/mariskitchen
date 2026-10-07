@@ -38,7 +38,7 @@ export default {
         // Short cache so a menu update shows up within a minute.
         "Cache-Control": "public, max-age=0, s-maxage=60",
       }));
-      const html = renderPage({ SITE, menu: content.menu, menus });
+      const html = renderPage({ SITE, menu: content.menu, menus, origin: SITE.url || url.origin });
       return new Response(request.method === "HEAD" ? null : html, { headers });
     }
 
