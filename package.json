@@ -1,0 +1,15 @@
+{
+  "name": "maris-kitchen",
+  "version": "1.0.0",
+  "private": true,
+  "description": "One-page website for Mari's Kitchen - homemade South Indian food",
+  "scripts": {
+    "dev": "npm run menu:seed:local && wrangler dev",
+    "deploy": "wrangler deploy",
+    "menu:seed:local": "wrangler r2 object put maris-kitchen/menu.json --file menu/menu.json --content-type application/json --local",
+    "menu:upload": "wrangler r2 object put maris-kitchen/menu.json --file menu/menu.json --content-type application/json --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "menu": {
+    "title": "Homemade Lunch / Dinner",
+    "date": "2026-10-05",
+    "note": "Kindly let us know of any allergies before ordering.",
+    "sections": [
+      {
+        "id": "meals",
+        "title": "Meals & Combos",
+        "subtitle": "Full plates, made the way amma makes them",
+        "items": [
+          {
+            "id": "rice-chicken-kulambu",
+            "name": "Rice + Chicken Kulambu + Egg",
+            "desc": "Steamed rice with spicy chicken kulambu and a boiled egg.",
+            "price": 7,
+            "veg": false
+          },
+          {
+            "id": "rice-kara-kulambu",
+            "name": "Rice + Kara Kulambu + Poriyal",
+            "desc": "Steamed rice with tangy kara kulambu and a dry vegetable poriyal.",
+            "price": 7,
+            "veg": true
+          },
+          {
+            "id": "chapathi-egg-gravy",
+            "name": "Chapathi (4) + Egg Gravy (2)",
+            "desc": "Four soft chapathis with two eggs in a spiced gravy.",
+            "price": 7,
+            "veg": false
+          }
+        ]
+      },
+      {
+        "id": "tiffin",
+        "title": "Tiffin",
+        "subtitle": "Light, soft & steamed",
+        "items": [
+          {
+            "id": "idly",
+            "name": "Idly (5) + Sambar + Chutney",
+            "desc": "Five fluffy idlies with sambar and chutney.",
+            "price": 6,
+            "veg": true
+          },
+          {
+            "id": "mini-idly",
+            "name": "Mini Idly (20) + Sambar + Chutney",
+            "desc": "Twenty bite-sized idlies with sambar and chutney.",
+            "price": 6,
+            "veg": true
+          },
+          {
+            "id": "idiyappam",
+            "name": "Idiyappam (6) + Salna / Coconut Milk",
+            "desc": "Six string hoppers with your choice of salna or sweet coconut milk.",
+            "price": 6,
+            "veg": null
+          }
+        ]
+      },
+      {
+        "id": "sides",
+        "title": "Fry & Sides",
+        "subtitle": "Perfect on their own or alongside a meal",
+        "items": [
+          {
+            "id": "chicken-65",
+            "name": "Chicken 65",
+            "desc": "Crisp, spicy South Indian fried chicken.",
+            "price": 6,
+            "veg": false
+          },
+          {
+            "id": "nethili-fish-fry",
+            "name": "Nethili Fish Fry",
+            "desc": "Crunchy fried nethili (anchovy), spiced and shallow-fried.",
+            "price": 6,
+            "veg": false
+          },
+          {
+            "id": "chicken-sukka",
+            "name": "Chicken Sukka",
+            "desc": "Dry-roasted chicken tossed in pepper and fresh spices.",
+            "price": 6,
+            "veg": false
+          },
+          {
+            "id": "moongdal-kootu",
+            "name": "Moong Dal Vegetable Kootu",
+            "desc": "Yellow moong dal simmered with vegetables and coconut.",
+            "price": 6,
+            "veg": true
+          }
+        ]
+      }
+    ]
+  }
+}
