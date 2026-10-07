@@ -224,6 +224,7 @@ export function renderPage({ SITE, menu, menus = [] }) {
   <img src="/logo-mark-light.svg" alt="" width="34" height="39">
   <p class="foot-name">${esc(SITE.name)}</p>
   <p class="muted">Real food for real families · Orders are taken on <a href="${esc(orderUrl)}" target="_blank" rel="noopener">cart15</a></p>
+  <p class="credit">Website designed by <a href="https://marchtech.co.uk/" target="_blank" rel="noopener noreferrer">MarchTech</a></p>
 </footer>
 
 <div class="order-bar"><a class="btn btn-primary block" href="${esc(orderUrl)}" target="_blank" rel="noopener">Order now</a></div>

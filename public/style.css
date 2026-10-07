@@ -117,6 +117,8 @@ section h2 { font-size: clamp(1.8rem, 6.5vw, 2.5rem); margin-bottom: 20px; }
 footer { background: var(--brown-dark); color: var(--cream); text-align: center; padding: 32px 20px; display: grid; justify-items: center; gap: 6px; }
 .foot-name { font: 700 1.1rem var(--serif); }
 footer a { color: var(--mint); }
+.credit { margin-top: 10px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .15); font-size: .85rem; opacity: .8; width: min(100%, 320px); }
+.credit a { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* Sticky order bar (mobile) */
 .order-bar { position: fixed; inset: auto 0 0 0; z-index: 30; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(251, 248, 241, .96); border-top: 1px solid var(--line); backdrop-filter: blur(8px); }
