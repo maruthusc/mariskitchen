@@ -6,13 +6,19 @@ Built on **Cloudflare Workers** with **R2**. Orders are taken on **cart15**, the
 ## How it works
 
 - `src/worker.js` renders the page on the server (no client JS needed) and serves static files from `public/`.
-- **Menu**: read live from cart15's public API, `GET {cart15}/api/public/kitchens/{CART15_SELLER}/menus` (cached 5 minutes).
+- **Menu glimpse**: the home page shows up to 6 dishes per open menu (like chefkamal) with a link to the full menu on cart15. It is read live from cart15's public API, `GET {cart15}/api/public/kitchens/{CART15_SELLER}/menus` (cached 5 minutes).
   Dishes, prices, offers, cut-off and collection times come from cart15 as published. Every **Order** button opens
   the menu's cart15 order page (or the storefront, `SITE.cart15Url`).
 - **R2** (`maris-kitchen` bucket) holds:
-  - `menu.json`: the static fallback menu shown when nothing is open on cart15 or cart15 is down (seeded from `menu/menu.json`).
+  - `menu.json`: the static fallback glimpse (dishes marked `"featured": true`, else the first 6) shown when nothing is open on cart15 or cart15 is down (seeded from `menu/menu.json`).
   - `img/<file>`: optional dish photos, served at `/img/<file>`. Reference one from a dish with `"image": "<file>"`.
 - No quote or catering feature for now.
+
+## Brand
+
+The logo is traced from the shop's WhatsApp profile picture (`public/logo.svg`, `logo-mark.svg`, `logo-mark-light.svg`,
+`favicon.svg`, `pattern.svg`; `og.png` is the DP itself, used for link previews). The palette (mint `#95d0ba`, chocolate `#4a3428`)
+comes from the same image. The logo reads **The Homemade Cook**, while the site text uses `SITE.name` ("Mari's Kitchen").
 
 ## Names (same as chefkamal)
 

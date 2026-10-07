@@ -7,21 +7,23 @@
       {
         "id": "meals",
         "title": "Meals & Combos",
-        "subtitle": "Full plates, made the way amma makes them",
+        "subtitle": "Full plates",
         "items": [
           {
             "id": "rice-chicken-kulambu",
             "name": "Rice + Chicken Kulambu + Egg",
             "desc": "Steamed rice with spicy chicken kulambu and a boiled egg.",
             "price": 7,
-            "veg": false
+            "veg": false,
+            "featured": true
           },
           {
             "id": "rice-kara-kulambu",
             "name": "Rice + Kara Kulambu + Poriyal",
             "desc": "Steamed rice with tangy kara kulambu and a dry vegetable poriyal.",
             "price": 7,
-            "veg": true
+            "veg": true,
+            "featured": true
           },
           {
             "id": "chapathi-egg-gravy",
@@ -42,7 +44,8 @@
             "name": "Idly (5) + Sambar + Chutney",
             "desc": "Five fluffy idlies with sambar and chutney.",
             "price": 6,
-            "veg": true
+            "veg": true,
+            "featured": true
           },
           {
             "id": "mini-idly",
@@ -56,7 +59,8 @@
             "name": "Idiyappam (6) + Salna / Coconut Milk",
             "desc": "Six string hoppers with your choice of salna or sweet coconut milk.",
             "price": 6,
-            "veg": null
+            "veg": null,
+            "featured": true
           }
         ]
       },
@@ -70,14 +74,16 @@
             "name": "Chicken 65",
             "desc": "Crisp, spicy South Indian fried chicken.",
             "price": 6,
-            "veg": false
+            "veg": false,
+            "featured": true
           },
           {
             "id": "nethili-fish-fry",
             "name": "Nethili Fish Fry",
             "desc": "Crunchy fried nethili (anchovy), spiced and shallow-fried.",
             "price": 6,
-            "veg": false
+            "veg": false,
+            "featured": true
           },
           {
             "id": "chicken-sukka",
