@@ -1,19 +1,26 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "maris-kitchen",
-  "main": "src/worker.js",
-  "compatibility_date": "2025-09-01",
-  "assets": {
-    "directory": "./public",
-    "binding": "ASSETS",
-    "run_worker_first": true
-  },
-  "r2_buckets": [
-    { "binding": "MENU_BUCKET", "bucket_name": "maris-kitchen" }
-  ],
-  // Same variable names as the Chef Kamal site. Leave NEXT_PUBLIC_CART15_URL unset for production
-  // (https://www.cart15.com); a staging deploy sets it to the cart15 staging host.
-  "vars": {
-    "NEXT_PUBLIC_SITE_URL": ""
-  }
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "maris-kitchen",
+	"main": "src/worker.js",
+	"compatibility_date": "2025-09-01",
+	"assets": {
+		"directory": "./public",
+		"binding": "ASSETS",
+		"run_worker_first": true
+	},
+	"r2_buckets": [
+		{
+			"binding": "MENU_BUCKET",
+			"bucket_name": "maris-kitchen"
+		},
+		{
+			"bucket_name": "maris-kitchen",
+			"binding": "maris_kitchen"
+		}
+	],
+	// Same variable names as the Chef Kamal site. Leave NEXT_PUBLIC_CART15_URL unset for production
+	// (https://www.cart15.com); a staging deploy sets it to the cart15 staging host.
+	"vars": {
+		"NEXT_PUBLIC_SITE_URL": ""
+	}
 }
